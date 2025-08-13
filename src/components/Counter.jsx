@@ -1,11 +1,19 @@
+import AddCount from "./AddCounter";
 
-const Counter = () => {
+const Counter = ({ plusHandler, minusHandler, resetHandler }) => {
   return (
     <div className="btn-group">
-        <button></button>
-        <button></button>
+        <AddCount plusHandler={plusHandler}/> 
+      <button className="btn btn-secondary" onClick={minusHandler}>
+        Minus
+      </button>
+      <button className="btn btn-danger" onClick={resetHandler}>
+        Reset
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default Counter
+
+
+export default Counter;
